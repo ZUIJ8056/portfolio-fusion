@@ -1,0 +1,43 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f4f4f4;
+  color: #333;
+}
+header {
+  background: #333;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+nav a {
+  margin: 0 10px;
+  color: #fff;
+  text-decoration: none;
+}
+.hero {
+  background: #00aaff;
+  color: white;
+  padding: 2rem;
+  text-align: center;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  padding: 2rem;
+}
+.card {
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+footer {
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
