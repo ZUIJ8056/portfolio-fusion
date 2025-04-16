@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flatland - Final Interactive Version</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f5f5f5;
+        }
+        
+        #words {
+            font-size: 24px;
+            margin-bottom: 30px;
+            min-height: 36px;
+            color: #333;
+            text-align: center;
+        }
+        
+        #square {
+            width: 200px;
+            height: 200px;
+            background-color: gray;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        
+        #controls {
+            margin-top: 30px;
+            display: flex;
+            gap: 10px;
+        }
+        
+        button {
+            padding: 8px 16px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div id="words">Welcome to Flatland!</div>
+    <div id="square">Click Me!</div>
+    <div id="controls">
+        <button id="resetBtn">Reset</button>
+        <button id="randomBtn">Random Color</button>
+    </div>
+
+    <script>
+        // DOM Elements
+        const square = document.getElementById('square');
+        const words = document.getElementById('words');
+        const resetBtn = document.getElementById('resetBtn');
+        const randomBtn = document.getElementById('randomBtn');
+        
+        // Buzzwords array for dynamic content
+        const buzzwords = [
+            "Interactive", "Dynamic", "Engaging", 
+            "Responsive", "Modern", "Clickable",
+            "Animated", "Reactive", "Digital",
+            "Virtual", "Interactive", "Web 3.0"
+        ];
+        
+        // Color options
+        const colors = [
+            'red', 'green', 'blue', 
+            'yellow', 'purple', 'orange',
+            'pink', 'teal', 'brown'
+        ];
+        
+        // Initialization
+        function init() {
+            updateBuzzword('Welcome to Flatland!');
+            setupEventListeners();
+        }
+        
+        // Set up all event listeners
+        function setupEventListeners() {
+            // Square interactions
+            square.addEventListener('click', function() {
+                this.style.backgroundColor = 'red';
+                updateBuzzword();
+            });
+            
+            square.addEventListener('mouseover', function() {
+                this.style.backgroundColor = 'green';
+            });
+            
+            square.addEventListener('mouseout', function() {
+                this.style.backgroundColor = 'gray';
+            });
+            
+            // Control buttons
+            resetBtn.addEventListener('click', function() {
+                square.style.backgroundColor = 'gray';
+                updateBuzzword('Welcome to Flatland!');
+            });
+            
+            randomBtn.addEventListener('click', function() {
+                const randomColor = colors[Math.floor(Math.random() * colors.length)];
+                square.style.backgroundColor = randomColor;
+                updateBuzzword(`Look at this ${randomColor} square!`);
+            });
+            
+            // Bonus: Double click
+            square.addEventListener('dblclick', function() {
+                this.style.backgroundColor = 'blue';
+                updateBuzzword("Double click detected!");
+            });
+        }
+        
+        // Update the words display
+        function updateBuzzword(customText) {
+            if (customText) {
+                words.textContent = customText;
+            } else {
+                const randomWord = buzzwords[Math.floor(Math.random() * buzzwords.length)];
+                words.textContent = `${randomWord} experience!`;
+            }
+        }
+        
+        // Initialize when page loads
+        window.onload = init;
+    </script>
+</body>
+</html>
