@@ -42,14 +42,14 @@ h1 {
 }
 
 .game-image {
-    flex: 1;
-    min-width: 300px;
+    background-color: #ff000020; /* Temporary red tint to see container */
+    outline: 2px dashed red; /* Visual debug */
 }
 
 .game-image img {
-    width: 100%;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: block;
+    height: auto;
+    max-width: 100%;
 }
 
 .game-info {
