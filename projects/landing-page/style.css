@@ -41,15 +41,15 @@ h1 {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-
+.game-image {
+    flex: 1;
+    min-width: 300px;
+}
 
 .game-image img {
     width: 100%;
-    height: auto; /* Maintain aspect ratio */
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    background-color: transparent; /* For PNGs with transparency */
-    object-fit: contain; /* Ensures full image is visible */
 }
 
 .game-info {
