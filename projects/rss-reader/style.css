@@ -1,7 +1,217 @@
+/* Base Styles */
+:root {
+    --primary-color: #4285f4;
+    --secondary-color: #34a853;
+    --error-color: #ea4335;
+    --text-color: #333;
+    --light-text: #666;
+    --border-color: #ddd;
+    --bg-color: #f9f9f9;
+    --card-bg: #fff;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    padding: 20px;
+}
+
+.dashboard-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: var(--card-bg);
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+header {
+    padding: 20px;
+    background: var(--primary-color);
+    color: white;
+}
+
+h1 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+h1 i {
+    margin-right: 10px;
+}
+
+.feed-selector {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.feed-selector label {
+    font-weight: bold;
+}
+
+#feed-select {
+    flex-grow: 1;
+    padding: 8px 12px;
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    font-weight: bold;
+}
+
+#feed-select option {
+    color: var(--text-color);
+}
+
+#refresh-btn {
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+#refresh-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.loading-indicator {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
     text-align: center;
 }
-h1 {
-    color: #333;
+
+.spinner {
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top: 4px solid white;
+    width: 30px;
+    height: 30px;
+    animation: spin 1s linear infinite;
+    margin-bottom: 15px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+#content {
+    padding: 20px;
+}
+
+.article-card {
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background: var(--card-bg);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.article-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.article-card h2 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+}
+
+.article-card .meta {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+    color: var(--light-text);
+}
+
+.article-card .description {
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.article-card .read-more {
+    display: inline-block;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.2s;
+}
+
+.article-card .read-more:hover {
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+
+.error-message {
+    padding: 20px;
+    background: #ffeeee;
+    border: 1px solid var(--error-color);
+    border-radius: 6px;
+    color: var(--error-color);
+    text-align: center;
+}
+
+footer {
+    padding: 15px 20px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--light-text);
+    border-top: 1px solid var(--border-color);
+}
+
+/* Tablet View */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .dashboard-container {
+        margin: 20px;
+    }
+    
+    #content {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    
+    .article-card {
+        margin-bottom: 0;
+    }
+}
+
+/* Desktop View */
+@media (min-width: 1025px) {
+    .dashboard-container {
+        margin: 40px auto;
+    }
+    
+    #content {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+        padding: 25px;
+    }
+    
+    h1 {
+        font-size: 2.2rem;
+    }
+    
+    .article-card h2 {
+        font-size: 1.4rem;
+    }
 }
