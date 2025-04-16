@@ -1,10 +1,42 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>RSS Reader</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Feed RSS Dashboard</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <h1>Multi-feed RSS Reader</h1>
+    <div class="dashboard-container">
+        <header>
+            <h1><i class="fas fa-rss"></i> RSS Feed Dashboard</h1>
+            <div class="feed-selector">
+                <label for="feed-select">Select Feed:</label>
+                <select id="feed-select">
+                    <option value="https://hacks.mozilla.org/feed/">Mozilla Hacks</option>
+                    <option value="http://feeds.bbci.co.uk/news/world/rss.xml">BBC World News</option>
+                    <option value="https://techcrunch.com/feed/">TechCrunch</option>
+                    <option value="https://feeds.npr.org/1001/rss.xml">NPR News</option>
+                </select>
+                <button id="refresh-btn" title="Refresh Feed"><i class="fas fa-sync-alt"></i></button>
+            </div>
+        </header>
+
+        <div class="loading-indicator" id="loading">
+            <div class="spinner"></div>
+            <p>Loading feed...</p>
+        </div>
+
+        <main id="content">
+            <!-- Feed content will be inserted here -->
+        </main>
+
+        <footer>
+            <p>Last updated: <span id="last-updated">Never</span></p>
+        </footer>
+    </div>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
