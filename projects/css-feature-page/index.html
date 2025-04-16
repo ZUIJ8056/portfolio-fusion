@@ -1,33 +1,245 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Responsive CSS Feature Page</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern CSS Features</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-  <header>
-    <h1>Modern CSS Techniques</h1>
-    <nav>
-      <a href="../../index.html">Home</a>
-      <a href="../landing-page/index.html">Landing Page</a>
-      <a href="../rock-paper-scissors/index.html">Game</a>
-      <a href="../rss-reader/index.html">RSS Reader</a>
-    </nav>
-  </header>
-  <section class="hero">
-    <h2>Welcome to the Feature Page</h2>
-    <p>We explore Flexbox and CSS Grid in a responsive layout.</p>
-  </section>
-  <section class="grid-container">
-    <div class="card">Flexbox Nav</div>
-    <div class="card">Hero Section</div>
-    <div class="card">CSS Grid</div>
-    <div class="card">Media Queries</div>
-  </section>
-  <footer>
-    <p>&copy; 2025 Portfolio Fusion</p>
-  </footer>
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">
+                <a href="#"><span>CSS</span>Master</a>
+            </div>
+            
+            <ul class="nav-links">
+                <li><a href="#hero"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="#features"><i class="fas fa-star"></i> Features</a></li>
+                <li><a href="#gallery"><i class="fas fa-images"></i> Gallery</a></li>
+                <li><a href="#testimonials"><i class="fas fa-quote-left"></i> Testimonials</a></li>
+                <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+            </ul>
+            
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <h1>Modern CSS Techniques</h1>
+            <p>Discover the power of Flexbox, Grid, and responsive design</p>
+            <a href="#features" class="cta-button">Explore Features</a>
+        </div>
+        <div class="hero-image">
+            <img src="https://via.placeholder.com/600x400" alt="CSS Illustration" class="img-fluid">
+        </div>
+    </section>
+
+    <main class="main-content">
+        <section id="features" class="features">
+            <h2 class="section-title">Key Features</h2>
+            <div class="features-grid">
+                <article class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-th"></i>
+                    </div>
+                    <h3>CSS Grid Layout</h3>
+                    <p>Create complex, responsive layouts with the powerful two-dimensional grid system.</p>
+                </article>
+                
+                <article class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-boxes"></i>
+                    </div>
+                    <h3>Flexbox</h3>
+                    <p>Efficiently align and distribute space among items in a container, even when their size is unknown.</p>
+                </article>
+                
+                <article class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Responsive Design</h3>
+                    <p>Adapt your layout to any screen size with media queries and fluid units.</p>
+                </article>
+                
+                <article class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <h3>Custom Properties</h3>
+                    <p>Use CSS variables for consistent theming and easier maintenance.</p>
+                </article>
+                
+                <article class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-magic"></i>
+                    </div>
+                    <h3>Animations</h3>
+                    <p>Create smooth transitions and animations without JavaScript.</p>
+                </article>
+                
+                <article class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-text-height"></i>
+                    </div>
+                    <h3>Modern Typography</h3>
+                    <p>Leverage variable fonts and advanced text properties for beautiful typography.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="gallery" class="gallery">
+            <h2 class="section-title">CSS Gallery</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/400x300" alt="CSS Example 1">
+                    <div class="gallery-overlay">
+                        <h3>Grid Layout</h3>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/400x300" alt="CSS Example 2">
+                    <div class="gallery-overlay">
+                        <h3>Flexbox</h3>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/400x300" alt="CSS Example 3">
+                    <div class="gallery-overlay">
+                        <h3>Animations</h3>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/400x300" alt="CSS Example 4">
+                    <div class="gallery-overlay">
+                        <h3>Responsive</h3>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/400x300" alt="CSS Example 5">
+                    <div class="gallery-overlay">
+                        <h3>Transitions</h3>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/400x300" alt="CSS Example 6">
+                    <div class="gallery-overlay">
+                        <h3>Variables</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonials" class="testimonials">
+            <h2 class="section-title">What Developers Say</h2>
+            <div class="testimonials-container">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"Modern CSS has completely transformed how I approach web design. The combination of Grid and Flexbox gives me so much control over layouts."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://via.placeholder.com/80" alt="Sarah Johnson">
+                        <h4>Sarah Johnson</h4>
+                        <p>Frontend Developer</p>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"I used to rely on frameworks for responsive design, but now with CSS Grid and media queries, I can create custom responsive layouts much faster."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://via.placeholder.com/80" alt="Michael Chen">
+                        <h4>Michael Chen</h4>
+                        <p>UI Designer</p>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"CSS custom properties have made my stylesheets so much more maintainable. It's like having a design system built right into CSS!"</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://via.placeholder.com/80" alt="David Rodriguez">
+                        <h4>David Rodriguez</h4>
+                        <p>Full Stack Developer</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-container">
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-button">Send Message</button>
+                </form>
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 CSS Street, Webville</p>
+                    <p><i class="fas fa-phone"></i> (123) 456-7890</p>
+                    <p><i class="fas fa-envelope"></i> info@cssmaster.com</p>
+                    
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-codepen"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About CSSMaster</h3>
+                <p>Dedicated to teaching modern CSS techniques and best practices for web developers of all levels.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Subscribe</h3>
+                <p>Stay updated with our latest tutorials and resources.</p>
+                <form class="subscribe-form">
+                    <input type="email" placeholder="Your Email">
+                    <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 CSSMaster. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
