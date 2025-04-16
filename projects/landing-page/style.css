@@ -48,8 +48,11 @@ h1 {
 
 .game-image img {
     width: 100%;
+    height: auto; /* Maintain aspect ratio */
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: transparent; /* For PNGs with transparency */
+    object-fit: contain; /* Ensures full image is visible */
 }
 
 .game-info {
