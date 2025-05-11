@@ -1,1 +1,42 @@
-c
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extended Rock, Paper, Scissors</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>Rock, Paper, Scissors</h1>
+        
+        <div class="scoreboard">
+            <div class="score-item">
+                <span class="score-label">Wins:</span>
+                <span id="wins" class="score-value">0</span>
+            </div>
+            <div class="score-item">
+                <span class="score-label">Losses:</span>
+                <span id="losses" class="score-value">0</span>
+            </div>
+            <div class="score-item">
+                <span class="score-label">Ties:</span>
+                <span id="ties" class="score-value">0</span>
+            </div>
+        </div>
+        
+        <div class="choices">
+            <button id="rock" class="choice-btn">✊</button>
+            <button id="paper" class="choice-btn">✋</button>
+            <button id="scissors" class="choice-btn">✌️</button>
+        </div>
+        
+        <div id="result" class="result"></div>
+        <div id="computer-choice" class="computer-choice"></div>
+        
+        <button id="reset" class="reset-btn">Reset Game</button>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
